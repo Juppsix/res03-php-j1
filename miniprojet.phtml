@@ -31,7 +31,19 @@ $students = [
         "average" => -1
     ]
 ];
+
+function average(array $notes) : float
+{
+    $somme_notes= 0;
+    
+    foreach($notes as $note) {
+        $somme_notes += $note;
+    }
+    $moyenne = $somme_notes / count($notes);
+    return $moyenne;
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -62,7 +74,7 @@ $students = [
         </ul>
     </section>
     <footer>
-        <h3>Moyenne des notes de l'étudiant </h3>
+        <h3><?php echo average($student["grades"]); ?> </h3>
     </footer>
 </article>
  <?php
