@@ -39,5 +39,39 @@ $animals = ["Chat", "Chien", "Lapin", "Souris"];
 $numbers = [28, 32, 44, -67, 18, 24, -98];
 
 
+for($i = 0; $i < count($numbers); $i++)
+{
+    if ($numbers[$i] < 0)
+    {
+        echo "$numbers[$i]";
+        echo "<br>";
+    }
+}
+$user = [
+    "firstName" => "Barack",
+    "lastName" => "Obama"
+];
+// $message_full = "$message World!";
+// echo $user["firstName"];
+$message = "Je suis {$user["firstName"]} {$user["lastName"]} le 44ème président des USA..";
+echo "$message";
+echo "<br>";
+
+$users = [
+    [
+        "firstName" => "Mari",
+        "lastName" => "Doucet"
+    ],
+    [
+        "firstName" => "Hugues",
+        "lastName" => "Froger"
+    ]
+];
+for ($i = 0; $i < count($users); $i++)
+{
+    echo $users[$i]["firstName"]  . " " . $users[$i]["lastName"];
+    echo "<br>";
+    
+}
 
 ?>
